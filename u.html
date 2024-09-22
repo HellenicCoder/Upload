@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Coding by CodingNepal || www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> upload filed|| Yahya Nebgui</title>
+    <link rel="stylesheet" href="u.css" />
+      <!-- Boxicons CSS -->
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+      <div class="button progress">
+        <div class="text-icon">
+            <i class="bx bx-cloud-upload"></i>
+            <span class="text">Upload file</span>
+        </div>
+      </div>
+
+      <script>
+        const button = document.querySelector(".button"),
+        text = document.querySelector(".text");
+
+        button.addEventListener("click", () => {
+            button.classList.add("progress");
+
+            text.innerText = "Uploading....";
+            
+            setTimeout(() => {
+                button.classList.remove("progress");
+                text.innerText = "Uploaded....";
+            }, 6000);
+        })
+      </script>
+  </body>
+</html>
